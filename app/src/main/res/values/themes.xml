@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BarberAppointment" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/marromclaro</item>
+    </style>
+
+    <style name="Theme.BarberAppointment" parent="Base.Theme.BarberAppointment" />
+</resources>

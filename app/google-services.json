@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "826769558334",
+    "project_id": "barberappointment-a2458",
+    "storage_bucket": "barberappointment-a2458.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826769558334:android:f56cd33c64bc0dc642ba6f",
+        "android_client_info": {
+          "package_name": "com.example.barberappointment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsEnJDiB6clhGoemQJPBb37aXbrq09fKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
