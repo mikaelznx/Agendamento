@@ -1,106 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/barberr"
+    android:background="@drawable/back"
     tools:context=".ui.MainActivity">
-    <com.google.android.material.appbar.AppBarLayout
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </com.google.android.material.appbar.AppBarLayout>
 
     <EditText
         android:id="@+id/editEmail"
         style="@style/Edit_text"
         android:layout_width="362dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_above="@+id/editPassword"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="6dp"
+        android:layout_marginTop="180dp"
         android:drawableLeft="@drawable/baseline_person_24"
         android:drawablePadding="10dp"
         android:hint="Informe seu e-mail"
         android:inputType="textEmailAddress"
         android:paddingLeft="9dp"
-        android:paddingRight="9dp"></EditText>
+        android:paddingRight="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
 
     <EditText
         android:id="@+id/editPassword"
         style="@style/Edit_text"
         android:layout_width="362dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_above="@+id/btnSend"
         android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="57dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="24dp"
         android:drawableLeft="@drawable/baseline_lock_24"
         android:drawableRight="@drawable/baseline_remove_red_eye_24"
         android:drawablePadding="10dp"
         android:hint="Defina uma senha"
         android:inputType="textPassword"
         android:paddingLeft="9dp"
-        android:paddingRight="9dp"></EditText>
+        android:paddingRight="9dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail"
+        app:layout_constraintVertical_bias="0.636"></EditText>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSend"
         style="@style/Botaop"
         android:layout_width="362dp"
 
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="323dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/botaop"
         android:foregroundTint="#F2E9E9"
         android:text="Registrar"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="18sp" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-10dp"
-        android:background="@color/marromclaro">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Psystems Software©"
-            android:textColor="@color/black" />
-    </androidx.appcompat.widget.Toolbar>
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="380dp"
-        android:layout_height="280dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="43dp"
-        android:background="@drawable/pole">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Consulte sua caixa de e-mail."
-            android:textColor="@color/black"
-            android:textSize="15.7dp" />
-    </androidx.appcompat.widget.Toolbar>
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

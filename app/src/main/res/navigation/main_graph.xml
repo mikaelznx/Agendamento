@@ -45,16 +45,16 @@
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment
-        android:id="@+id/recoverFragment"
-        android:name="com.example.barberappointment.ui.auth.recoverFragment"
-        android:label="recoverFragment" >
-        <action
-            android:id="@+id/action_recoverFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.barberappointment.ui.homeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/recoverFragment"
+        android:name="com.example.barberappointment.ui.auth.RecoverFragment"
+        android:label="RecoverFragment" >
+        <action
+            android:id="@+id/action_recoverFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>

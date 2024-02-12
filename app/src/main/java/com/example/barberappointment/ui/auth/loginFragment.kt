@@ -36,9 +36,10 @@ class loginFragment : Fragment() {
     }
 
 
-    private fun initClick(){
+    private fun initClick() {
 
-        binding.btnLogin.setOnClickListener{validateData()
+        binding.btnLogin.setOnClickListener {
+            validateData()
 
         }
         binding.btnRecover.setOnClickListener {
@@ -46,26 +47,33 @@ class loginFragment : Fragment() {
         }
 
     }
-    private fun validateData(){
-        val email= binding.editEmail.text.toString().trim()
-        val password= binding.editPassword.text.toString().trim()
-        if (email.isNotEmpty()){
-            if (password.isNotEmpty()){
-                loginUser(email, password)
-            }else{
-                Toast.makeText(requireContext(), "Informe sua senha.", Toast.LENGTH_SHORT).show()}
 
-        }else{
+    private fun validateData() {
+        val email = binding.editEmail.text.toString().trim()
+        val password = binding.editPassword.text.toString().trim()
+        if (email.isNotEmpty()) {
+            if (password.isNotEmpty()) {
+                loginUser(email, password)
+            } else {
+                Toast.makeText(requireContext(), "Informe sua senha.", Toast.LENGTH_SHORT).show()
+            }
+
+        } else {
             Toast.makeText(requireContext(), "Informe seu email.", Toast.LENGTH_SHORT).show()
         }
     }
-    private fun loginUser(email: String, password: String){
+
+    private fun loginUser(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
                     findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
                 } else {
-                    Toast.makeText(requireContext(),"Credenciais incorretas, tente novamente.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        "Credenciais incorretas, tente novamente.",
+                        Toast.LENGTH_SHORT
+                    ).show()
 
                 }
             }
